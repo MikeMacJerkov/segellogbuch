@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Segellogbuch" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Fahrtensegel-Logbuch mit VBS Punkteberechnung" />
+
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icon-152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/icon-167.png" />
+
+    <!-- iOS Splash Screens -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <title>Segellogbuch</title>
+
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body, #root { height: 100%; }
+      body {
+        background: #05101f;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        overscroll-behavior: none;
+      }
+      /* iOS safe area support */
+      #root {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
