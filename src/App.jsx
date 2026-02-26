@@ -585,6 +585,7 @@ export default function App() {
   const [flash, setFlash]   = useState(false);
   const [delId, setDelId]   = useState(null);
   const [expId, setExpId]   = useState(null);
+  const [exportFlash, setExportFlash] = useState(false);
 
   const profil = data.profil;
   const toerns = data.toerns;
@@ -984,7 +985,6 @@ export default function App() {
               const saisonToerns = filterSaisonToerns(toerns);
               const { start, end } = getSaisonZeitraum();
               const fmt = (d) => new Date(d).toLocaleDateString("de-DE", { day: "2-digit", month: "short", year: "numeric" });
-              const [exportFlash, setExportFlash] = useState(false);
 
               const handleExport = () => {
                 const csv = buildCSV(saisonToerns, profil);
